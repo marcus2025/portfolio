@@ -1,11 +1,13 @@
 
+import dhruv from '/images/dhruv.jpeg';
+
 const About = () => {
   return (
     <section className="w-full max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-12 py-12 md:py-20 animate-fade-in-up">
       {/* Profile Image Section */}
       <div className="flex-shrink-0 mb-8 md:mb-0">
         <img
-          src="src/assets/dhruv.jpeg"
+          src={dhruv}
           alt="Dhruv Verma profile"
           className="w-40 h-40 md:w-56 md:h-56 rounded-full object-cover border-4 border-cyan-400 shadow-lg"
         />
