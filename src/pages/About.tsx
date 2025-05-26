@@ -6,7 +6,7 @@ const About = () => {
       {/* Profile Image Section */}
       <div className="flex-shrink-0 mb-8 md:mb-0">
         <img
-          src="/profile.jpg"
+          src="src/assets/dhruv.jpeg"
           alt="Dhruv Verma profile"
           className="w-40 h-40 md:w-56 md:h-56 rounded-full object-cover border-4 border-cyan-400 shadow-lg"
         />

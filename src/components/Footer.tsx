@@ -8,7 +8,7 @@ const Footer = () => {
       </div>
       <div className="flex space-x-4">
         <a
-          href="https://github.com/janedoe"
+          href="https://github.com/dhruvverma2002"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-cyan-400 transition-colors duration-200"
@@ -16,7 +16,7 @@ const Footer = () => {
           GitHub
         </a>
         <a
-          href="https://linkedin.com/in/janedoe"
+          href="https://linkedin.com/in/dhruv-verma-31330730b/"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-cyan-400 transition-colors duration-200"
@@ -24,7 +24,7 @@ const Footer = () => {
           LinkedIn
         </a>
         <a
-          href="mailto:jane.doe@email.com"
+          href="mailto:dhruvverma.dev@gmail.com"
           className="hover:text-cyan-400 transition-colors duration-200"
         >
           Email

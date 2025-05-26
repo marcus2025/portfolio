@@ -27,12 +27,12 @@ const Contacts = () => {
             GitHub: dhruvverma2002
           </a>
           <a
-            href="https://linkedin.com/in/janedoe"
+            href="https://www.linkedin.com/in/dhruv-verma-31330730b/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-slate-300 hover:text-cyan-400 transition-colors duration-200"
           >
-            LinkedIn: linkedin.com/in/janedoe
+            LinkedIn: dhruv-verma-31330730b
           </a>
         </div>
         <div className="mt-8 text-slate-400 text-sm">
