@@ -1,37 +1,38 @@
 import { Link } from 'react-router'
+import { motion } from 'framer-motion'
 
 const projects = [
   {
     title: 'Project Management Dashboard',
-    image: '/project-dashboard.jpg',
+    image: '/public/images/Project Management Dashboard.png',
     description: 'A real-time dashboard for managing projects, tasks, and teams. Built with React, Node.js, WebSockets, and MongoDB.',
     link: '/project',
     tags: ['React', 'Node.js', 'MongoDB', 'WebSockets'],
   },
   {
     title: 'E-Commerce Platform',
-    image: '/ecommerce.jpg',
+    image: 'public/images/E-Commerce Platform.png',
     description: 'A scalable e-commerce solution with product management, payment integration, and user authentication. Built with Next.js, Express, PostgreSQL, and Stripe API.',
     link: '#',
     tags: ['Next.js', 'Express', 'PostgreSQL', 'Stripe'],
   },
   {
     title: 'Personal Portfolio',
-    image: '/portfolio.jpg',
+    image: 'public/images/Personal Portfolio.png',
     description: 'A modern, responsive portfolio website to showcase skills, projects, and contact information. Built with React and Tailwind CSS.',
     link: '#',
     tags: ['React', 'Tailwind CSS'],
   },
   {
     title: 'Chat Application',
-    image: '/chat-app.jpg',
+    image: '/public/images/Chat Application.png',
     description: 'A real-time chat application with private and group messaging, built using React, Node.js, and Socket.io.',
     link: '#',
     tags: ['React', 'Node.js', 'Socket.io'],
   },
   {
     title: 'Blog Platform',
-    image: '/blog.jpg',
+    image: 'public/images/Blog Platform.png',
     description: 'A full-featured blog platform with markdown support, comments, and user authentication. Built with Next.js and MongoDB.',
     link: '#',
     tags: ['Next.js', 'MongoDB'],
@@ -45,9 +46,15 @@ const ProjectsHome = () => {
         Projects Showcase
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {projects.map((project) => (
-          <div
+        {projects.map((project, idx) => (
+          <motion.div
             key={project.title}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 + idx * 0.1, ease: 'easeOut' }}
+            viewport={{ once: true }}
+            whileHover={{ scale: 1.04, boxShadow: '0 8px 32px 0 rgba(0,255,255,0.10)' }}
+            whileTap={{ scale: 0.98 }}
             className="bg-slate-900/80 rounded-xl shadow-lg hover:shadow-cyan-500/20 transition-shadow duration-200 flex flex-col"
           >
             <img
@@ -59,10 +66,18 @@ const ProjectsHome = () => {
               <h2 className="text-xl font-bold mb-2 text-cyan-400">{project.title}</h2>
               <p className="text-slate-300 mb-4 flex-1">{project.description}</p>
               <div className="flex flex-wrap gap-2 mb-4">
-                {project.tags.map((tag) => (
-                  <span key={tag} className="px-3 py-1 rounded-full bg-slate-800 text-cyan-300 text-xs font-semibold shadow">
+                {project.tags.map((tag, i) => (
+                  <motion.span
+                    key={tag}
+                    className="px-3 py-1 rounded-full bg-slate-800 text-cyan-300 text-xs font-semibold shadow"
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.2, delay: 0.2 + i * 0.05 + idx * 0.1, ease: 'easeOut' }}
+                    viewport={{ once: true }}
+                    whileHover={{ scale: 1.13, background: 'linear-gradient(90deg,#06b6d4,#6366f1)' }}
+                  >
                     {tag}
-                  </span>
+                  </motion.span>
                 ))}
               </div>
               <Link
@@ -72,7 +87,7 @@ const ProjectsHome = () => {
                 View Project
               </Link>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

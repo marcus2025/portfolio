@@ -16,7 +16,7 @@ const Navbar = () => {
   return (
     <nav className="w-full max-w-6xl mx-auto px-4 md:px-8 py-4 flex items-center justify-between relative">
       <div className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent select-none">
-        Dhruv Verma
+        <Link to={'/'}  >Dhruv Verma</Link>
       </div>
       {/* Hamburger for mobile */}
       <button
