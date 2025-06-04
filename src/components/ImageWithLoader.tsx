@@ -15,7 +15,7 @@ const ImageWithLoader: React.FC<ImageWithLoaderProps> = ({ src, alt, loader, cla
   return (
     <div style={{ position: 'relative', display: 'inline-block' }}>
       {loading && !error && (
-        <div style={{ position: 'absolute', top: 0, left: 0 }}>
+        <div className='absolute inset-0 flex items-center justify-center bg-slate-800/60 rounded-lg'>
           {loader || <span>Loading...</span>}
         </div>
       )}
