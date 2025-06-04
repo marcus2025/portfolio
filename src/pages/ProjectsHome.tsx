@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 
 const projects = [
   {
+    id: 'project-management-dashboard',
     title: 'Project Management Dashboard',
     image: '/images/Project Management Dashboard.png',
     description: 'A real-time dashboard for managing projects, tasks, and teams. Built with React, Node.js, WebSockets, and MongoDB.',
@@ -10,6 +11,7 @@ const projects = [
     tags: ['React', 'Node.js', 'MongoDB', 'WebSockets'],
   },
   {
+    id: 'e-commerce-platform',
     title: 'E-Commerce Platform',
     image: '/images/E-Commerce Platform.png',
     description: 'A scalable e-commerce solution with product management, payment integration, and user authentication. Built with Next.js, Express, PostgreSQL, and Stripe API.',
@@ -17,6 +19,7 @@ const projects = [
     tags: ['Next.js', 'Express', 'PostgreSQL', 'Stripe'],
   },
   {
+    id: 'personal-portfolio',
     title: 'Personal Portfolio',
     image: '/images/Personal Portfolio.png',
     description: 'A modern, responsive portfolio website to showcase skills, projects, and contact information. Built with React and Tailwind CSS.',
@@ -24,6 +27,7 @@ const projects = [
     tags: ['React', 'Tailwind CSS'],
   },
   {
+    id: 'chat-application',
     title: 'Chat Application',
     image: '/images/Chat Application.png',
     description: 'A real-time chat application with private and group messaging, built using React, Node.js, and Socket.io.',
@@ -31,6 +35,7 @@ const projects = [
     tags: ['React', 'Node.js', 'Socket.io'],
   },
   {
+    id: 'blog-platform',
     title: 'Blog Platform',
     image: '/images/Blog Platform.png',
     description: 'A full-featured blog platform with markdown support, comments, and user authentication. Built with Next.js and MongoDB.',
@@ -81,7 +86,7 @@ const ProjectsHome = () => {
                 ))}
               </div>
               <Link
-                to={project.link}
+                to={`/projects/${project.id}`}
                 className="mt-auto inline-block px-6 py-2 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold shadow-lg hover:scale-105 transition-transform duration-200"
               >
                 View Project

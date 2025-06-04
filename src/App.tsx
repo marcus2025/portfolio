@@ -5,6 +5,7 @@ import About from "./pages/About";
 import Contacts from "./pages/Contacts";
 import Services from "./pages/Services";
 import ProjectsHome from "./pages/ProjectsHome";
+import Project from "./pages/Project";
 import NotFound from "./pages/NotFound";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route path="/contact" element={<Contacts />} />
           <Route path="/services" element={<Services />} />
           <Route path="/projects" element={<ProjectsHome />} />
+          <Route path="/projects/:id" element={<Project />} />
           <Route path="/not-found" element={<NotFound/>}/>
           <Route path="*" element={<Navigate to="/not-found" replace />} />
         </Route>

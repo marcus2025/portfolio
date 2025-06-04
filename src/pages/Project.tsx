@@ -1,5 +1,7 @@
+import { useParams } from 'react-router-dom'
 
-const project = {
+const demo = {
+  id: 'project-management-dashboard',
   title: 'Project Management Dashboard',
   image: '/project-dashboard.jpg', // Replace with your actual image path
   description:
@@ -26,7 +28,110 @@ const project = {
   },
 }
 
+
+const projects = [
+  {
+    id: 'project-management-dashboard',
+    title: 'Project Management Dashboard',
+    image: '/images/Project Management Dashboard.png',
+    description: 'A real-time dashboard for managing projects, tasks, and teams. Built with React, Node.js, WebSockets, and MongoDB.',
+    features: [
+      'Real-time collaboration with WebSockets',
+      'Drag-and-drop task management',
+      'User roles and permissions',
+      'Analytics with visual charts',
+      'Task deadlines and priority labels',
+      'Responsive design for all screen sizes',
+    ],
+    techStack: ['React', 'Node.js', 'Express', 'MongoDB', 'WebSockets', 'Tailwind CSS'],
+    links: {
+      live: 'https://project-dashboard-demo.vercel.app',
+      github: 'https://github.com/dhruvverma/project-management-dashboard',
+    },
+  },
+  {
+    id: 'e-commerce-platform',
+    title: 'E-Commerce Platform',
+    image: '/images/E-Commerce Platform.png',
+    description: 'A scalable e-commerce platform with product management, payments, and user accounts.',
+    features: [
+      'Product listings with filters and search',
+      'Stripe payment gateway integration',
+      'Admin dashboard for inventory management',
+      'Secure authentication with JWT',
+      'Order history and status tracking',
+      'Mobile-first responsive UI',
+    ],
+    techStack: ['Next.js', 'Express', 'PostgreSQL', 'Stripe API', 'Tailwind CSS'],
+    links: {
+      live: 'https://ecommerce-demo.vercel.app',
+      github: 'https://github.com/dhruvverma/e-commerce-platform',
+    },
+  },
+  {
+    id: 'personal-portfolio',
+    title: 'Personal Portfolio',
+    image: '/images/Personal Portfolio.png',
+    description: 'A sleek and modern developer portfolio to showcase skills, resume, and projects.',
+    features: [
+      'Project showcase with tags and filters',
+      'Animated transitions and hover effects',
+      'Downloadable resume section',
+      'Responsive layout with mobile-first design',
+      'Contact form with email integration',
+      'Dark/light theme toggle',
+    ],
+    techStack: ['React', 'Tailwind CSS', 'Framer Motion', 'EmailJS'],
+    links: {
+      live: 'https://dhruv-portfolio.vercel.app',
+      github: 'https://github.com/dhruvverma/portfolio',
+    },
+  },
+  {
+    id: 'chat-application',
+    title: 'Chat Application',
+    image: '/images/Chat Application.png',
+    description: 'A real-time chat app for private and group conversations, built with sockets.',
+    features: [
+      'Real-time messaging with Socket.io',
+      'User authentication and profiles',
+      'Group and one-to-one chat support',
+      'Typing indicators and message timestamps',
+      'Online/offline user status',
+      'Responsive chat interface',
+    ],
+    techStack: ['React', 'Node.js', 'Socket.io', 'Express', 'MongoDB', 'Tailwind CSS'],
+    links: {
+      live: 'https://chatapp-demo.vercel.app',
+      github: 'https://github.com/dhruvverma/chat-application',
+    },
+  },
+  {
+    id: 'blog-platform',
+    title: 'Blog Platform',
+    image: '/images/Blog Platform.png',
+    description: 'A powerful blogging platform with markdown support and user comments.',
+    features: [
+      'Markdown editor with preview mode',
+      'User authentication and role-based access',
+      'Post categories and tags',
+      'Comments section with moderation tools',
+      'SEO-optimized routes and meta tags',
+      'Dashboard for post management',
+    ],
+    techStack: ['Next.js', 'MongoDB', 'Auth.js', 'Tailwind CSS', 'MDX'],
+    links: {
+      live: 'https://blog-platform-demo.vercel.app',
+      github: 'https://github.com/dhruvverma/blog-platform',
+    },
+  },
+]
+
 const Project = () => {
+
+  const { id } = useParams()
+  const project = projects.find(p => p.id === id) || demo;
+  
   return (
     <section className="w-full max-w-4xl mx-auto py-12 md:py-20 animate-fade-in-up">
       <h1 className="text-3xl md:text-4xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">
