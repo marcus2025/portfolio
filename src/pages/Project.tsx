@@ -1,32 +1,32 @@
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate, Navigate } from 'react-router-dom'
 
-const demo = {
-  id: 'project-management-dashboard',
-  title: 'Project Management Dashboard',
-  image: '/project-dashboard.jpg', // Replace with your actual image path
-  description:
-    'A real-time dashboard for managing projects, tasks, and teams. Built with React, Node.js, WebSockets, and MongoDB. Features drag-and-drop, notifications, and analytics.',
-  features: [
-    'Real-time collaboration with WebSockets',
-    'Drag-and-drop task management',
-    'Customizable project views',
-    'User authentication and roles',
-    'Analytics and reporting dashboard',
-    'Responsive and accessible UI',
-  ],
-  techStack: [
-    'React',
-    'Node.js',
-    'Express',
-    'MongoDB',
-    'WebSockets',
-    'Tailwind CSS',
-  ],
-  links: {
-    live: 'https://your-live-demo.com',
-    github: 'https://github.com/yourusername/project-dashboard',
-  },
-}
+// const demo = {
+//   id: 'project-management-dashboard',
+//   title: 'Project Management Dashboard',
+//   image: '/project-dashboard.jpg', // Replace with your actual image path
+//   description:
+//     'A real-time dashboard for managing projects, tasks, and teams. Built with React, Node.js, WebSockets, and MongoDB. Features drag-and-drop, notifications, and analytics.',
+//   features: [
+//     'Real-time collaboration with WebSockets',
+//     'Drag-and-drop task management',
+//     'Customizable project views',
+//     'User authentication and roles',
+//     'Analytics and reporting dashboard',
+//     'Responsive and accessible UI',
+//   ],
+//   techStack: [
+//     'React',
+//     'Node.js',
+//     'Express',
+//     'MongoDB',
+//     'WebSockets',
+//     'Tailwind CSS',
+//   ],
+//   links: {
+//     live: 'https://your-live-demo.com',
+//     github: 'https://github.com/yourusername/project-dashboard',
+//   },
+// }
 
 
 const projects = [
@@ -129,11 +129,24 @@ const projects = [
 
 const Project = () => {
 
+  const navigate = useNavigate();
+
   const { id } = useParams()
-  const project = projects.find(p => p.id === id) || demo;
+  const project = projects.find(p => p.id === id) ;
   
+  if (!project) {
+    return <Navigate to="/not-found" replace />; 
+  }
   return (
     <section className="w-full max-w-4xl mx-auto py-12 md:py-20 animate-fade-in-up">
+        <button
+    onClick={() => {  
+      navigate(-1);
+    }}
+    className="mb-6 px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold shadow-lg hover:scale-105 transition-transform duration-200" 
+  >
+    &larr; Back to Projects
+  </button>
       <h1 className="text-3xl md:text-4xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">
         {project.title}
       </h1>
