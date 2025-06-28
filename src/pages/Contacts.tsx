@@ -19,20 +19,20 @@ const Contacts = () => {
             dhruvverma.dev@gmail.com
           </a>
           <a
-            href="https://github.com/dhruvverma2002"
+            href="https://github.com/vermadhruv02"
             target="_blank"
             rel="noopener noreferrer"
             className="text-slate-300 hover:text-cyan-400 transition-colors duration-200"
           >
-            GitHub: dhruvverma2002
+            GitHub: vermadhruv02
           </a>
           <a
-            href="https://www.linkedin.com/in/dhruv-verma-31330730b/"
+            href="https://www.linkedin.com/in/dhruvverma-cse/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-slate-300 hover:text-cyan-400 transition-colors duration-200"
           >
-            LinkedIn: dhruv-verma-31330730b
+            LinkedIn: dhruvverma-cse
           </a>
         </div>
         <div className="mt-8 text-slate-400 text-sm">
