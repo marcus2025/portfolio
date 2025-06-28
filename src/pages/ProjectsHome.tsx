@@ -57,7 +57,7 @@ const ProjectsHome = () => {
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 + idx * 0.1, ease: 'easeOut' }}
-            viewport={{ once: true }}
+            viewport={{ once: true,  amount: 0.5 }}
             whileHover={{ scale: 1.04, boxShadow: '0 8px 32px 0 rgba(0,255,255,0.10)' }}
             whileTap={{ scale: 0.98 }}
             className="bg-slate-900/80 rounded-xl shadow-lg hover:shadow-cyan-500/20 transition-shadow duration-200 flex flex-col"

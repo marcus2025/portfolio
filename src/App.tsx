@@ -7,10 +7,12 @@ import Services from "./pages/Services";
 import ProjectsHome from "./pages/ProjectsHome";
 import Project from "./pages/Project";
 import NotFound from "./pages/NotFound";
+import ScrollToTop from "./hook/ScrollToTop";
 
 function App() {
   return (
-
+<>
+    <ScrollToTop />
     <Routes>
         <Route path="/" element={<MainLayout />}>
           <Route index element={<Home />} />
@@ -23,6 +25,7 @@ function App() {
           <Route path="*" element={<Navigate to="/not-found" replace />} />
         </Route>
     </Routes>
+</>
   )
 }
 

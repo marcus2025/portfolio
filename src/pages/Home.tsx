@@ -124,7 +124,7 @@ const Home = () => {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1, ease: 'easeOut' }}
-          viewport={{ once: true }}
+          viewport={{ once: true,  amount: 0.5 }}
         className="bg-slate-900/80 rounded-xl p-6 shadow-lg hover:shadow-cyan-500/20 transition-shadow duration-200">
           <h2 className="text-xl font-bold mb-2 text-cyan-400">Frontend</h2>
           <p className="text-slate-300">
@@ -138,7 +138,7 @@ const Home = () => {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1, ease: 'easeOut' }}
-          viewport={{ once: true }}
+          viewport={{ once: true ,  amount: 0.5}}
         className="bg-slate-900/80 rounded-xl p-6 shadow-lg hover:shadow-cyan-500/20 transition-shadow duration-200">
           <h2 className="text-xl font-bold mb-2 text-cyan-400">Backend</h2>
           <p className="text-slate-300">
@@ -152,7 +152,7 @@ const Home = () => {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1, ease: 'easeOut' }}
-          viewport={{ once: true }} 
+          viewport={{ once: true,  amount: 0.5 }} 
          className="bg-slate-900/80 rounded-xl p-6 shadow-lg hover:shadow-cyan-500/20 transition-shadow duration-200">
           <h2 className="text-xl font-bold mb-2 text-cyan-400">
             DevOps & Tools
