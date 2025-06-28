@@ -36,7 +36,7 @@ const Contacts = () => {
           </a>
         </div>
         <div className="mt-8 text-slate-400 text-sm">
-          Based in Jaipur, Rajasthan, India · Available for remote work
+          Based in Jaipur, Rajasthan, India · Available for work
         </div>
       </div>
       {/* Contact Form Section */}

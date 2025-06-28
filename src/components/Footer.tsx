@@ -7,7 +7,7 @@ const Footer = () => {
       </div>
       <div className="flex space-x-4">
         <a
-          href="https://github.com/dhruvverma2002"
+          href="https://github.com/vermadhruv02"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-cyan-400 transition-colors duration-200"
@@ -15,7 +15,7 @@ const Footer = () => {
           GitHub
         </a>
         <a
-          href="https://linkedin.com/in/dhruv-verma-31330730b/"
+          href="https://linkedin.com/in/dhruvverma-cse/"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-cyan-400 transition-colors duration-200"
